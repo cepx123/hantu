@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>wkwwkk</title>
+</head>
+<body>
+  <video id="bgVideo"
+    src="hantu.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;">
+</video>
+
+<audio id="bgMusic" src="musik.mp3" loop></audio>
+
+<button id="soundBtn" style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;">
+    Hidupkan Suara 🔊
+</button>
+
+<script>
+const video = document.getElementById("bgVideo");
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("soundBtn");
+
+btn.onclick = () => {
+    video.muted = false;
+    video.play();
+    music.play();   // musik mulai bareng video
+    btn.style.display = "none";
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MANYAPPP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="scene auth-scene">
+    <div class="auth-card">
+      <h1 class="title">ANJAYYYYYYYYYYYY</h1>
+
+      <div class="tabs" role="tablist" aria-label="Auth Tabs">
+        <button id="tab-login" class="tab active" role="tab" aria-selected="true">Masuk</button>
+        <button id="tab-register" class="tab" role="tab" aria-selected="false">Daftar</button>
+      </div>
+
+      <form id="loginForm" class="form active" autocomplete="off">
+        <label>Username
+          <input id="loginUser" name="user" required />
+        </label>
+        <label>Password
+          <input id="loginPass" name="pass" type="password" required />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Masuk</button>
+        </div>
+        <p class="note">Belum punya akun? Klik tab "Daftar".</p>
+      </form>
+
+      <form id="registerForm" class="form" autocomplete="off">
+        <label>Username
+          <input id="regUser" name="user" required />
+        </label>
+        <label>Password
+          <input id="regPass" name="pass" type="password" required />
+        </label>
+        <label>Konfirmasi Password
+          <input id="regPass2" name="pass2" type="password" required />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Daftar</button>
+        </div>
+        <p class="note">Akun disimpan di browser (demo). Untuk produksi, gunakan server autentikasi.</p>
+      </form>
+
+      <div id="msg" class="msg" aria-live="polite"></div>
+    </div>
+
+    <footer class="footer">Demo aman — pengguna selalu bisa keluar / pause / seek.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
